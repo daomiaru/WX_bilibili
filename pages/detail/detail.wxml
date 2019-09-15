@@ -1,0 +1,67 @@
+<!-- 公共的头部 -->
+<view class="main">
+<myTitle></myTitle>
+
+<!-- 视频 -->
+<view class="video">
+<video src="{{videoDetail.videoSrc}}" controls="true"></video>
+<!-- 视频详情 -->
+<view class="videoDetail">
+<!-- 视频标题 -->
+<view>
+<text class="video_title">{{videoDetail.videoTitle}}</text>
+</view>
+<!-- 视频作者 -->
+<text class="video_autor">{{videoDetail.author}}</text>
+<!-- 播放量 -->
+<text class="play_Count">{{videoDetail.playCount}}万次观看</text>
+<!-- 弹幕数 -->
+<text class="barrage_Count">{{videoDetail.commentCount}}弹幕</text>
+<!-- 时间 -->
+<text class="data">{{videoDetail.date}}</text>
+</view>
+</view>
+
+<!-- 推荐视频 -->
+<view class="other_wrap">
+<navigator class="others_item" wx:for="{{othersList}}" wx:key="{{index}}" class="other_item">
+<!-- 图片 -->
+<view class="img_wrap">
+<image src="{{item.imgSrc}}" mode="widthFix"></image>
+</view>
+<!-- 推荐视频信息 -->
+<view class="others_info">
+<!-- 推荐视频标题 -->
+<text class="others_title">{{item.title}}</text>
+<view class="others_text">
+<!-- 推荐视频播放量 -->
+<text class="others_playCount">{{item.playMsg}}万次观看</text>
+<!-- 推荐视频评论 -->
+<text class="others_comment">{{item.commentCount}}弹幕</text>
+</view>
+</view>
+</navigator>
+</view>
+
+<!-- 评论 -->
+<view class="comment_wrap">
+<text>评论({{commentData.commentTotalCount}})</text>
+
+<view class="comment_item" wx:for="{{commentData.commentList}}" wx:key="{{index}}">
+<!-- 评论左边 -->
+<view class="comment_left">
+<image src="{{item.userIconSrc}}"  mode="widthFix"></image>
+</view>
+<!-- 评论右边 -->
+<view class="comment_right">
+<view class="comment_user">
+<text class="user">{{item.username}}</text>
+<text class="comment_date">{{item.commentDate}}</text>
+</view>
+<view class="comment">
+<text>{{item.commentInfo}}</text>
+</view>
+</view>
+</view>
+</view>
+</view>
