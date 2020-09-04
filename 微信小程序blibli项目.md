@@ -1,5 +1,7 @@
 ## 微信小程序项目之哔哩哔哩
 
+由于图片路径问题，这里图片的引入有误，详细信息可以查看我的博客有同样的开发文档https://daomiaru.github.io/archives/
+
 先来看看页面整体效果
 
 ![1568545001591](C:\Users\14331\AppData\Roaming\Typora\typora-user-images\1568545001591.png)
